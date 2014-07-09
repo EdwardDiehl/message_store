@@ -4,6 +4,7 @@ require 'securerandom'
 module MessageStore
   module Backends
     autoload :File, 'message_store/backends/file'
+    autoload :Rest, 'message_store/backends/rest'
   end
 
   def self.new(options = {})
