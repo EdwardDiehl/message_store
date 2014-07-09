@@ -9,11 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Edward Diehl"]
   spec.email         = ["EdwDiehl@gmail.com"]
   spec.summary       = %q{Library that stores text data into different key-value storage backends}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
-
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = `git ls-files -z`.split("\x0") + Dir['lib/message_store/backends/*']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
